@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    title Сломанный воздух
+  body
+    .container
+      video [  loop muted id="video"
+            src="https://dl.dropboxusercontent.com/u/1595336/surfers.mp4"
+            ]
+    .container id="release-container"
+      .triangle-up
+      nav
+        ul class="navigation"
+           li class="blue-link"
+            a href="#" Youtube
+           li class="white-link"
+            a href="#" Facebook
+           li class="blue-link"
+            a href="#"  Bandcamp
+           li class="white-link" 
+            a href="#" Instagram
+           li class="blue-link"
+            a href="#"  Vkontakte
+
+      .release-block
+        .release-header
+          p Сломанный воздух 
+          strong 
+          	= @release.name
+        .release-art
+          == @release.embed
+      .triangle-bottom
+    .container class="latest-video"
+      .wrapper id="wrapper"
+        p class="white"
+          =@youtube.name
+        strong 
+          =@youtube.description
+        br
+        .youtube-container
+          .video-container
+            ==@youtube.embed
+    .container class="band-container"    
+      .band
+        = image_tag "IMG_6024.jpg", class:"image-wide", id:"band-image"
+      .triangle-up
+      .text-wrapper
+        p class="white" Contact us
+        strong class="blue-link"
+          a href="mailto: brokenair.info@gmail.com"  brokenair.info@gmail.com
+      .triangle-bottom

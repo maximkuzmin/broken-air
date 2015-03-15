@@ -1,0 +1,14 @@
+- if !logged_in?
+  = form_for(:admin) do |f|
+    .email
+      = f.label :email
+      = f.email_field :email
+    .password
+      = f.label :password
+      = f.password_field :password
+
+    .actions
+      == f.submit "Log in", url: login_path, :method => :post
+- else
+  p You are already in, #{current_admin.email}
+  = button_to "Log out", logout_path, :method => :delete
