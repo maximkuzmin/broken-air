@@ -1,14 +1,26 @@
-- if !logged_in?
-  = form_for(:admin) do |f|
-    .email
-      = f.label :email
-      = f.email_field :email
-    .password
-      = f.label :password
-      = f.password_field :password
+.container
+      video [  autoplay loop muted id="video"
+            src="https://dl.dropboxusercontent.com/u/1595336/surfers.mp4"
+            ]
+.container id="release-container"            
+  .triangle-up
+  - if !logged_in?
+    = form_for :admin, html: { class: "login-form"}  do |f|
+      .email
+        = f.label :email
+        br
+        = f.email_field :email, class: "input-field"
+        br
+      .password
+        = f.label :password
+        br
+        = f.password_field :password, class: "input-field"
+        br
 
-    .actions
-      == f.submit "Log in", url: login_path, :method => :post
-- else
-  p You are already in, #{current_admin.email}
-  = button_to "Log out", logout_path, :method => :delete
+      .actions
+        == f.submit "Log in", url: login_path, :method => :post, class: "form-button"
+  - else
+    .login-form
+      p  You are already in, #{current_admin.email}
+      = button_to "Log out", logout_path, :method => :delete, class: "form-button"
+  .triangle-bottom
