@@ -1,4 +1,6 @@
+function releasePositionControl() {
 
+};
 function videoClassControl() {
   var proportion = $(window).width() / $(window).height(); 
   if (proportion > 1.7) {
