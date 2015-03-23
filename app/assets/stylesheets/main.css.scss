@@ -141,6 +141,9 @@ strong {
 		p:after {
 			content:"///";
 			letter-spacing: .2em;
+			font-size: 0.85em;
+			position:relative;
+			bottom: .13em;
 		}
 		strong {
 			color: $firm-color;
