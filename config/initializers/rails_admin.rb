@@ -18,15 +18,14 @@ RailsAdmin.config do |config|
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
 
-  
   config.authorize_with do
     redirect_to main_app.login_path unless logged_in?
   end
-  
+
   config.main_app_name = ["Air"]
 
 
-  
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
