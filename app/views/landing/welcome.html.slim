@@ -44,7 +44,7 @@ html
             ==@youtube.embed
     .container class="band-container"    
       .band
-        = image_tag "IMG_6024.jpg", class:"image-wide", id:"band-image"
+        = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image"
       .triangle-up
       .text-wrapper
         p class="white" Contact us
