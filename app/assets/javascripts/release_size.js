@@ -1,6 +1,8 @@
 function releasePositionControl() {
-
+  required = ($(window).height() - $('.release-block').height() ) / 2 - 30
+  $('.release-block').attr('style', 'margin-top:' +  required  + 'px')
 };
+
 function videoClassControl() {
   var proportion = $(window).width() / $(window).height(); 
   if (proportion > 1.7) {
@@ -36,12 +38,15 @@ function imageControl() {
 
 
 $(document).ready(function() {
+  releasePositionControl();
   videoClassControl();
   triangleBottomControl();
   imageControl();
+
 });
 
 $("video").ready(function() {
+  releasePositionControl();
   videoClassControl();
   triangleBottomControl();
   releaseControl();
@@ -49,6 +54,7 @@ $("video").ready(function() {
 });
 
 $( window ).resize(function() {
+  releasePositionControl();
   videoClassControl();
   triangleBottomControl();
   imageControl();

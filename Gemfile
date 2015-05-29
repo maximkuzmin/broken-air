@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'paperclip', "~> 4.2"
+gem 'paperclip-av-transcoder'
 gem 'rails', '4.2.0'
 gem 'rails_admin', '~> 0.6.6'
 gem 'sass-rails', '~> 5.0'

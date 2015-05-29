@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529194549) do
+ActiveRecord::Schema.define(version: 20150529200357) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20150529194549) do
   create_table "frontpages", force: :cascade do |t|
     t.string   "name"
     t.boolean  "active"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.string   "band_image_file_name"
     t.string   "band_image_content_type"
     t.integer  "band_image_file_size"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20150529194549) do
     t.string   "video_poster_content_type"
     t.integer  "video_poster_file_size"
     t.datetime "video_poster_updated_at"
+    t.string   "video_background_file_name"
+    t.string   "video_background_content_type"
+    t.integer  "video_background_file_size"
+    t.datetime "video_background_updated_at"
   end
 
   create_table "releases", force: :cascade do |t|
