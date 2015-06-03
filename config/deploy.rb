@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:maximkuzmin/broken-air.git'
 
 
 set :deploy_to, '/home/deploy/broken-air'
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml, config/secrets.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default branch is :master
