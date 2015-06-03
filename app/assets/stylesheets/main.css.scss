@@ -1,9 +1,12 @@
 /* Common */
+
 $firm-color: #00aeef; 
 $triangle-height: 100px;
+
 * {
 	box-sizing:border-box;
 }
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -12,7 +15,7 @@ html, body {
 	background-color: black;
 	box-sizing: border-box;
 	text-align: center;
-	font-family: "PT Sans Narrow";
+	font-family: "PT Sans Narrow", Helvetica, Arial;
 	text-transform: uppercase;
 	letter-spacing: .15em;
 	font-size: 0.9em;
@@ -23,9 +26,9 @@ html, body {
     width: 0;
     height: 0;
     border-bottom: $triangle-height solid black; 
-    border-left: 500px solid transparent;
+    border-left: 0px solid transparent;
     position: absolute;
-	bottom: 0px;
+		bottom: 0px;
 }
 
 .triangle-up {
@@ -84,6 +87,7 @@ a:after {content:"///";
 p {
 	display: inline-block;
 }
+
 p:after {
 	content:"///";
 	letter-spacing: .25em;
@@ -91,6 +95,7 @@ p:after {
 	position:relative;
 	bottom: 0.13em;
 }
+
 strong {
 	color: $firm-color;
 	font-weight: lighter;
@@ -102,6 +107,7 @@ strong {
 }
 
 /* release container*/
+
 #release-container {
 	position: absolute;
 	top: 0px;

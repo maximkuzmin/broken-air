@@ -3,13 +3,14 @@ html
   head
     title Сломанный воздух
   body
-    .container
-      video [  preload="auto"
-               poster= @frontpage.video_poster.url(:wide) 
-               loop muted id="video"
-               src= @frontpage.video_background.url(:normal)
-               autoplay
-             ]
+    .container 
+      .container data-stellar-ratio='-2'
+        video [  preload="auto"
+                 poster= @frontpage.video_poster.url(:wide) 
+                 loop muted id="video"
+                 src= @frontpage.video_background.url(:normal)
+                 autoplay
+               ]
     .container id="release-container"
       .triangle-up
       nav
@@ -20,15 +21,15 @@ html
             a href="#" Facebook
            li class="blue-link"
             a href="#"  Bandcamp
-           li class="white-link" 
+           li class="white-link"
             a href="#" Instagram
            li class="blue-link"
             a href="#"  Vkontakte
 
       .release-block
         .release-header
-          p Сломанный воздух 
-          strong 
+          p Сломанный воздух
+          strong
           	= @release.name
         .release-art
           == @release.embed
@@ -43,10 +44,9 @@ html
         .youtube-container
           .video-container
             ==@youtube.embed
-    .container class="band-container"    
-      .band
-        = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image"
+    .container class="band-container" 
       .triangle-up
+        = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image"
       .text-wrapper
         p class="white" Contact us
         strong class="blue-link"
