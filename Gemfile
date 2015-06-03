@@ -18,7 +18,6 @@ group :development, :test do
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'capistrano-linked-files'
   gem 'capistrano-rvm', github: "capistrano/rvm"
   gem 'sqlite3'
   gem 'byebug'
