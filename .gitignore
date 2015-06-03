@@ -20,3 +20,4 @@ public/assets/
 public/system
 bin/
 config/secrets.yml
+config/database.yml
