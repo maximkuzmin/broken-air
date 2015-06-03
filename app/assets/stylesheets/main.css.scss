@@ -183,6 +183,7 @@ strong {
 		}
 	}
 }
+
 /* band section */
 .text-wrapper {
 	text-align: right;
@@ -200,15 +201,9 @@ strong {
 	}
 
 }
-.band {
-	height: 110%;
-	background-color: gray;
-	
-	background-size: cover;
-	background-position: center;
-	-webkit-transition: -webkit-filter 2s;
-	transition: filter 2s, -webkit-filter 2s;
 
+.band {
+	height: 100%;
 }
 
 .image-wide {
@@ -220,56 +215,55 @@ strong {
 
 
 /* Login page styles */
-.login-form {
-	position: relative;
-	top: 25%;
-	width: 100%;
-	display: inline-block;
-	text-align: center;
-	font-color: $firm-color;
-	
-	.input-field {
-		  display: inline-block;
-		  margin: 10px;
-		  width: 50%;
-		  font-family: PT Sans Narrow;
-		  font-size: 1.3em;
-		  border: solid 0px #dcdcdc;
-		  background-color: rgba(0,0,0, 0.3);
-		  text-align: center;
-		  height: 3em;
-		  transition: background-color 2s;
-	}
-	.input-field:hover {
-		  background-color: $firm-color;
+
+	.login-form {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		font-color: $firm-color;
+		
+		.input-field {
+			  display: inline-block;
+			  margin: 10px;
+			  width: 50%;
+			  font-family: PT Sans Narrow;
+			  font-size: 1.3em;
+			  border: solid 0px #dcdcdc;
+			  background-color: rgba(0,0,0, 0.3);
+			  text-align: center;
+			  height: 3em;
+			  transition: background-color 2s;
+		}
+		.input-field:hover {
+			  background-color: $firm-color;
+		}
+
+		label{ 
+			color: black;
+		 }
+		label::after {
+			content: '///';
+		}
 	}
 
-	label{ 
-		color: black;
-	 }
-	label::after {
-		content: '///';
+	.form-button {
+		background-color: rgba(0,0,0, 0.3);
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family: PT Sans Narrow;
+		font-size:16px;
+		padding:16px 31px;
+		text-decoration:none;
+		border: 0px;
+		transition: background-color 2s;
 	}
-}
-
-.form-button {
-	background-color: rgba(0,0,0, 0.3);
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family: PT Sans Narrow;
-	font-size:16px;
-	padding:16px 31px;
-	text-decoration:none;
-	border: 0px;
-	transition: background-color 2s;
-}
-.form-button:hover {
-	background-color: $firm-color;
-}
-.form-button:active {
-	position:relative;
-	top:1px;
-}
-
-        
+	.form-button:hover {
+		background-color: $firm-color;
+	}
+	.form-button:active {
+		position:relative;
+		top:1px;
+	}

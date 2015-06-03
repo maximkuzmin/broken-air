@@ -4,16 +4,17 @@ html
     title Сломанный воздух
   body
     .container 
-      .container data-stellar-ratio='-2'
+      .container data-stellar-ratio='.7'
         video [  preload="auto"
                  poster= @frontpage.video_poster.url(:wide) 
                  loop muted id="video"
                  src= @frontpage.video_background.url(:normal)
                  autoplay
                ]
+
     .container id="release-container"
-      .triangle-up
-      nav
+      .triangle-up 
+      nav data-stellar-ratio='1.2'
         ul class="navigation"
            li class="blue-link"
             a href="#" Youtube
@@ -25,7 +26,6 @@ html
             a href="#" Instagram
            li class="blue-link"
             a href="#"  Vkontakte
-
       .release-block
         .release-header
           p Сломанный воздух
@@ -34,9 +34,10 @@ html
         .release-art
           == @release.embed
       .triangle-bottom
-    .container class="latest-video"
+
+    .container class="latest-video" 
       .wrapper id="wrapper"
-        p class="white"
+        p class="white" 
           =@youtube.name
         strong 
           =@youtube.description
@@ -44,12 +45,13 @@ html
         .youtube-container
           .video-container
             ==@youtube.embed
+
     .container class="band-container" 
       .triangle-up
-      .band
-        = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image"
-      .text-wrapper
+      .band 
+        = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image", alt:'the band'
+      .triangle-bottom
+      .text-wrapper data-stellar-ratio='.4'
         p class="white" Contact us
         strong class="blue-link"
           a href="mailto: brokenair.info@gmail.com"  brokenair.info@gmail.com
-      .triangle-bottom

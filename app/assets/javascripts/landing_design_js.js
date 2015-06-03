@@ -50,7 +50,7 @@
     videoClassControl();
     triangleBottomControl();
     imageControl();
-    $(window).stellar();
+    $.stellar();
   });
 
   $("video").ready(function() {
