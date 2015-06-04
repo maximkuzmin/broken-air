@@ -1,4 +1,7 @@
 class Frontpage < ActiveRecord::Base
+
+  validates_presence_of :band_image, :video_poster
+
   attr_accessor :band_image 
   attr_accessor :delete_band_image
   before_validation { self.band_image.clear if self.delete_band_image == '1' }
@@ -15,7 +18,8 @@ class Frontpage < ActiveRecord::Base
   attr_accessor :delete_video_background
     has_attached_file :video_background, :styles => {
     :normal => { :geometry => "1920x1020!", :format => 'mp4' },
-    :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 10 }
+    :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 0 },
+    :poster => { :geometry => '1920x1080', :format => 'jpg', :time => 0 }
   }, :processors => [:transcoder]
 
 end

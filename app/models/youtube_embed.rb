@@ -1,5 +1,3 @@
 class YoutubeEmbed < ActiveRecord::Base
-	validates :embed, :presence => :true
-	validates :name, :presence => :true
-	validates :description, :presence => :true
+  validates_presence_of :embed, :name, :description
 end

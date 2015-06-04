@@ -10,11 +10,10 @@ html
                  loop muted id="video"
                  src= @frontpage.video_background.url(:normal)
                  autoplay
-               ]
-
+               ]    
     .container id="release-container"
       .triangle-up 
-      nav data-stellar-ratio='1.2'
+      nav data-stellar-ratio='1.2' class='navigation'
         ul class="navigation"
            li class="blue-link"
             a href="#" Youtube
@@ -50,8 +49,8 @@ html
       .triangle-up
       .band 
         = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image", alt:'the band'
-      .triangle-bottom
-      .text-wrapper data-stellar-ratio='.4'
+      .text-wrapper
         p class="white" Contact us
         strong class="blue-link"
           a href="mailto: brokenair.info@gmail.com"  brokenair.info@gmail.com
+      .triangle-bottom
