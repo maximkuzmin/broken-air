@@ -144,6 +144,11 @@ strong {
 	}
 
 	.release-block {
+    iframe {
+      -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.51);
+      -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.51);
+      box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.51);
+    }
 		height: auto;
 		width: auto;
 		display: inline-block;
@@ -248,7 +253,7 @@ strong {
 			  background-color: $firm-color;
 		}
 
-		label{ 
+		label{
 			color: black;
 		 }
 		label::after {

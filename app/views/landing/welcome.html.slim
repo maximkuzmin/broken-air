@@ -5,13 +5,13 @@ html
   body
     .container
       .container data-stellar-ratio='.7'
+        img class='poster' src="#{ @frontpage.video_background.url(:poster)}" id='poster'
         video [  preload = "auto"
                  poster = ( @frontpage.video_background.url(:poster) || @frontpage.video_poster.url(:wide))
                  loop muted id = "video"
                  src = @frontpage.video_background.url(:normal)
                  autoplay
                ]
-        img class='poster' src="#{ @frontpage.video_background.url(:poster)}" id='poster'
     .container id="release-container"
       .triangle-up
       nav data-stellar-ratio='1.2' class='navigation'
