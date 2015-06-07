@@ -3,7 +3,7 @@ html
   head
     title Сломанный воздух
   body
-    .container 
+    .container
       .container data-stellar-ratio='.7'
         video [  preload = "auto"
                  poster = ( @frontpage.video_background.url(:poster) || @frontpage.video_poster.url(:wide))
@@ -11,6 +11,7 @@ html
                  src = @frontpage.video_background.url(:normal)
                  autoplay
                ]
+        img class='poster' src="#{ @frontpage.video_background.url(:poster)}" id='poster'
     .container id="release-container"
       .triangle-up
       nav data-stellar-ratio='1.2' class='navigation'

@@ -11,12 +11,14 @@
 
   /* вычисляет пропорции окна и задает нужный класс видео*/
   function videoClassControl() {
-    var proportion = $(window).width() / $(window).height(); 
+    var proportion = $(window).width() / $(window).height();
     if (proportion > 1.7) {
     	$("#video").attr("class", "wide-video")
+      $("#poster").attr("class", "wide-poster")
     }
     else {
     	$("#video").attr("class", "narrow-video")
+      $("#poster").attr("class", "narrow-poster")
     };
   };
 
