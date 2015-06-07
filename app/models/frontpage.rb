@@ -19,7 +19,7 @@ class Frontpage < ActiveRecord::Base
     has_attached_file :video_background, :styles => {
     :normal => { :geometry => "1920x1080!", :format => 'mp4' },
     :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 0 },
-    :poster => { :geometry => '1920x1080', :format => 'jpg', :time => 0 }
+    :poster => { :geometry => '1920x1080', :format => 'png', :time => 0 }
   }, :processors => [:transcoder]
 
 end
