@@ -6,7 +6,7 @@ html
     .container 
       .container data-stellar-ratio='.7'
         video [  preload = "auto"
-                 poster = @frontapage.video_background.url(:poster) || @frontpage.video_poster.url(:wide)
+                 poster = ( @frontpage.video_background.url(:poster) || @frontpage.video_poster.url(:wide))
                  loop muted id = "video"
                  src = @frontpage.video_background.url(:normal)
                  autoplay
