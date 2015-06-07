@@ -17,7 +17,7 @@ class Frontpage < ActiveRecord::Base
   attr_accessor :video_background
   attr_accessor :delete_video_background
     has_attached_file :video_background, :styles => {
-    :normal => { :geometry => "1920x1020!", :format => 'mp4' },
+    :normal => { :geometry => "1920x1080!", :format => 'mp4' },
     :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 0 },
     :poster => { :geometry => '1920x1080', :format => 'jpg', :time => 0 }
   }, :processors => [:transcoder]
