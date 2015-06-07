@@ -5,14 +5,14 @@ html
   body
     .container 
       .container data-stellar-ratio='.7'
-        video [  preload="auto"
-                 poster= @frontpage.video_poster.url(:wide) 
-                 loop muted id="video"
-                 src= @frontpage.video_background.url(:normal)
+        video [  preload = "auto"
+                 poster = @frontapage.video_background.url(:poster) || @frontpage.video_poster.url(:wide)
+                 loop muted id = "video"
+                 src = @frontpage.video_background.url(:normal)
                  autoplay
-               ]    
+               ]
     .container id="release-container"
-      .triangle-up 
+      .triangle-up
       nav data-stellar-ratio='1.2' class='navigation'
         ul class="navigation"
            li class="blue-link"
