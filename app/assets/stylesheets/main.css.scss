@@ -281,9 +281,9 @@ strong {
 		top:1px;
 	}
 
-.poster {
+#poster {
   display: none;
-  width: inherit;
+  width: auto;
 }
 
 .narrow-poster {
@@ -298,16 +298,22 @@ strong {
 
    /*media-queries*/
 
-@media (max-width: 480px){
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 700px) {
   video {
     display: none;
   }
-  .poster {
+  #poster {
     display: block;
   }
-
-
 }
+
+
+
+
+
+
   /*@media (max-width: 1000px) {*/
     /*html {font-size: 0.8em;}*/
     /*.latest-video {*/

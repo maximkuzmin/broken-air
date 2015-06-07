@@ -2,7 +2,7 @@ class Frontpage < ActiveRecord::Base
 
   validates_presence_of :band_image, :video_poster
 
-  attr_accessor :band_image 
+  attr_accessor :band_image
   attr_accessor :delete_band_image
   before_validation { self.band_image.clear if self.delete_band_image == '1' }
   has_attached_file :band_image, :styles => { :normal => "1920x1920>", :thumbnail => '50x50' }, :default_url => "/images/:style/missing.png"
