@@ -17,15 +17,15 @@ html
       nav data-stellar-ratio='1.2' class='navigation'
         ul class="navigation"
            li class="blue-link"
-            a href="http://www.youtube.com/user/SoundAirlines" Youtube
+            a href="http://www.youtube.com/user/SoundAirlines" target="_blank" Youtube
            li class="white-link"
-            a href="https://www.facebook.com/brokenair" Facebook
+            a href="https://www.facebook.com/brokenair" target="_blank" Facebook
            li class="blue-link"
-            a href="http://brokenair.bandcamp.com/"  Bandcamp
+            a href="http://brokenair.bandcamp.com/" target="_blank"  Bandcamp
            li class="white-link"
-            a href="https://instagram.com/brokenair/" Instagram
+            a href="https://instagram.com/brokenair/" target="_blank" Instagram
            li class="blue-link"
-            a href="https://vk.com/broken_air"  Vkontakte
+            a href="https://vk.com/broken_air" target="_blank"  Vkontakte
       .release-block
         .release-header
           p Сломанный воздух
@@ -35,11 +35,11 @@ html
           == @release.embed
       .triangle-bottom
 
-    .container class="latest-video" 
+    .container class="latest-video"
       .wrapper id="wrapper"
-        p class="white" 
+        p class="white"
           =@youtube.name
-        strong 
+        strong
           =@youtube.description
         br
         .youtube-container
@@ -53,5 +53,5 @@ html
       .text-wrapper
         p class="white" Contact us
         strong class="blue-link"
-          a href="mailto: brokenair.info@gmail.com"  brokenair.info@gmail.com
+          a href="mailto:brokenair.info@gmail.com"  brokenair.info@gmail.com
       .triangle-bottom
