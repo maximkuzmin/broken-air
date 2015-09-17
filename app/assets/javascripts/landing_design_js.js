@@ -63,7 +63,7 @@
     imageControl();
   });
 
-  $( window ).resize(function() {
+  $(window).resize(function() {
     releasePositionControl();
     videoClassControl();
     triangleBottomControl();
