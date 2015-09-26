@@ -4,7 +4,7 @@ html
     title Сломанный воздух
   body
     .container
-      .container data-stellar-ratio='.7'
+      .container
         img class='poster' src="#{ @frontpage.video_background.url(:poster)}" id='poster'
         video [  preload = "auto"
                  poster = ( @frontpage.video_background.url(:poster) || @frontpage.video_poster.url(:wide))
@@ -14,7 +14,7 @@ html
                ]
     .container id="release-container"
       .triangle-up
-      nav data-stellar-ratio='1.2' class='navigation'
+      nav class='navigation'
         ul class="navigation"
            li class="blue-link"
             a href="http://www.youtube.com/user/SoundAirlines" target="_blank" Youtube
@@ -32,7 +32,7 @@ html
           strong
           	= @release.name
         .release-art
-          == @release.embed
+          == @release.embed.gsub("<iframe", "<iframe id='release' ")
       .triangle-bottom
 
     .container class="latest-video"
@@ -46,9 +46,9 @@ html
           .video-container
             ==@youtube.embed
 
-    .container class="band-container" 
+    .container class="band-container"
       .triangle-up
-      .band 
+      .band
         = image_tag @frontpage.band_image.url(:normal), class:"image-wide", id:"band-image", alt:'the band'
       .text-wrapper
         p class="white" Contact us

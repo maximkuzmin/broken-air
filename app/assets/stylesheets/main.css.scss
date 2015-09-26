@@ -130,6 +130,7 @@ strong {
 		.navigation {
 			list-style-type: none;
 			text-align: left;
+      opacity: 0;
 
 			li {
 				display: inline-block;
@@ -150,6 +151,7 @@ strong {
       box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.51);
     }
 		height: auto;
+    opacity: 0;
 		width: auto;
 		display: inline-block;
 		font-size: 1.2em;
