@@ -1,6 +1,8 @@
 class SessionController < ApplicationController
   def new #login page
     @admin = Admin.new
+    offset = rand Frontpage.count
+    @frontpage = Frontpage.offset(offset).first
   end
 
   def create #

@@ -1,8 +1,11 @@
 .container
-      video [  autoplay loop muted id="video"
-            src="https://dl.dropboxusercontent.com/u/1595336/surfers.mp4"
-            ]
-.container id="release-container"            
+  video [  preload = "auto"
+    poster = ( @frontpage.video_background.url(:poster) || @frontpage.video_poster.url(:wide) || "")
+          loop muted id = "video"
+          src = ( @frontpage.video_background.url(:normal) || "")
+          autoplay
+         ]
+.container id="release-container"
   .triangle-up
   - if !logged_in?
     = form_for :admin, html: { class: "login-form"}  do |f|
