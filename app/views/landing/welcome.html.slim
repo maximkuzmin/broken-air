@@ -12,7 +12,7 @@ html
               p class="white"
                 = @gig.event_place
               p class='just-white'
-                = @gig.event_date.to_s
+                = I18n.l @gig.event_date, :format => :long
             a href=@gig.event_link class='just-white'
               img id="afisha" src=@gig.poster.url
             .link-wrapper
