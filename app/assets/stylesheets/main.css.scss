@@ -1,6 +1,6 @@
 /* Common */
 
-$firm-color: #00aeef; 
+$firm-color: #00aeef;
 $triangle-height: 100px;
 
 * {
@@ -25,7 +25,7 @@ html, body {
 .triangle-bottom {
     width: 0;
     height: 0;
-    border-bottom: $triangle-height solid black; 
+    border-bottom: $triangle-height solid black;
     border-left: 0px solid transparent;
     position: absolute;
 		bottom: 0px;
@@ -312,146 +312,56 @@ and (max-device-width : 700px) {
 }
 
 
+/*Modal window design*/
 
+.modal-window {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 200;
 
+  .modal-block {
+    height: 100%;
+    color: white;
 
+    .frame {
+      height: 100%;
+      margin: 0 auto;
+      background-color: rgba(0,0,0, .6);
+      position: relative;
 
-  /*@media (max-width: 1000px) {*/
-    /*html {font-size: 0.8em;}*/
-    /*.latest-video {*/
-      /*height: auto;*/
-    /*}	*/
-    /*.youtube-container {*/
-      /*width: 100%;*/
-      /*margin-bottom: 40px;*/
-    /*}*/
+      .close-cross {
+        font-size : 5em;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        color: white;
+	      transition: color 1s;
+        cursor: pointer;
+      }
 
-    /*#release-container {*/
-      /*position: absolute;*/
-      /*top: 0px;*/
-      /*text-align: center;*/
+      .close-cross:hover {
+        color: $firm-color;
+      }
 
-      /*nav {*/
-        /*position: absolute;*/
-        /*top: 0px;*/
-        /*left: 0px;*/
-        /*z-index: 5;*/
+      img { height: 80%; }
 
-        /*.navigation {*/
-          /*list-style-type: none;*/
-          /*text-align: left;*/
+      .link-wrapper {
+        margin: 1em;
+      }
 
-          /*li {*/
+      .blue-link:a { color:white;}
 
-            /*display: inline-block;*/
-            /*margin: 0px;*/
-            /*margin-top: 6px;*/
-            /*padding-left: 0px;*/
-            /*margin-left: 0px;*/
-            /*padding-right: 0px;*/
-            /*margin-right: 0px;*/
-          /*}*/
-        /*}*/
-      /*}*/
-    /*}*/
-  /*}*/
+      .white { color: $firm-color }
 
-    /*@media (max-width: 700px) {*/
+      .just-white:after { content: "" }
 
-    /*.latest-video {*/
-      /*height: auto;*/
-    /*}	*/
-    /*.youtube-container {*/
-      /*width: 100%;*/
-      /*margin-bottom: 40px;*/
-    /*}*/
+      .blue-link, .white-link { display: inline}
+      .blue-link:after { margin: 0px;}
 
-    /*.triangle-up {*/
-        /*width: 0;*/
-        /*height: 0;*/
-        /*border-top: 50px solid black; */
-        /*border-right: 100px solid transparent;		*/
-        /*position: absolute;*/
-        /*top: 0px;*/
-    /*}*/
-
-
-
-    /*.triangle-bottom {*/
-        /*width: 0;*/
-        /*height: 0;*/
-        /*border-bottom: 50px solid black; */
-        /*border-left: 0px solid transparent;*/
-        /*position: absolute;*/
-        /*bottom: 0px;*/
-    /*}*/
-
-    /*#release-container {*/
-      /*position: absolute;*/
-      /*top: 0px;*/
-      /*text-align: center;*/
-
-      /*nav {*/
-        /*position: absolute;*/
-        /*top: 0px;*/
-        /*left: 0px;*/
-        /*width: 100%;*/
-        /*z-index: 5;*/
-
-        /*.navigation {*/
-          /*margin-top: 50px;*/
-          /*list-style-type: none;*/
-          /*text-align: center;*/
-          /*width: 100%;*/
-
-          /*li {*/
-            /*display: inline;*/
-            /*margin: 0px;*/
-            /*margin-top: 40px;*/
-            /*padding-left: 0px;*/
-            /*margin-left: 0px;*/
-            /*padding-right: 0px;*/
-            /*margin-right: 0px;*/
-          /*}*/
-        /*}*/
-      /*}*/
-    /*}*/
-  /*}*/
-
-  /*@media (max-height: 600px) {*/
-
-    /*.triangle-up {*/
-        /*width: 0;*/
-        /*height: 0;*/
-        /*border-top: 30px solid black; */
-        /*border-right: 100px solid transparent;		*/
-        /*position: absolute;*/
-        /*top: 0px;*/
-    /*}*/
-
-
-
-    /*.triangle-bottom {*/
-        /*width: 0;*/
-        /*height: 0;*/
-        /*border-bottom: 30px solid black; */
-        /*border-left: 0px solid transparent;*/
-        /*position: absolute;*/
-        /*bottom: 0px;*/
-    /*}*/
-
-
-    /*.navigation {*/
-      /*display: none;*/
-    /*}*/
-    /*#release-container {*/
-      /*text-align: center;*/
-      /*width: 100%;*/
-    /*}*/
-    /*.navigation {*/
-      /*width: 100%;*/
-      /*li {*/
-        /*display: inline;*/
-      /*}*/
-    /*}*/
-  /*}*/
+    }
+  }
+}
