@@ -3,20 +3,25 @@ html
   head
     title Сломанный воздух
   body
-    .modal-window
-      .modal-block
-        .frame
-          span class="close-cross" &#215;
-          .date-wrapper
-            p class="white" Томск
-            p class='just-white' 24 октября
-          a href="https://vk.com/brokenair24october" class='just-white'
-            img id="afisha" src="https://pp.vk.me/c624926/v624926246/48b63/T0hLMKPKbu4.jpg"
-          .link-wrapper
-            .blue-link
-              a href="https://vk.com/brokenair24october" target="_blank" vkontakte
-            .white-link
-              a href="http://brokenair.qrickets.com/" target="_blank" купить билеты
+    - if @gig.present?
+      .modal-window
+        .modal-block
+          .frame
+            span class="close-cross" &#215;
+            .date-wrapper
+              p class="white"
+                = @gig.event_place
+              p class='just-white'
+                = @gig.event_date.to_s
+            a href=@gig.event_link class='just-white'
+              img id="afisha" src=@gig.poster.url
+            .link-wrapper
+              .blue-link
+                a href=@gig.event_link target="_blank"
+                  = @gig.event_name
+              .white-link
+                a href=@gig.tickets_link target="_blank"
+                  = @gig.tickets_name
     .container
       .container
         img class='poster' src="#{ @frontpage.video_background.url(:poster)}" id='poster'
