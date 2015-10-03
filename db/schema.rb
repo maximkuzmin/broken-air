@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529200357) do
+ActiveRecord::Schema.define(version: 20151003215240) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -37,6 +37,21 @@ ActiveRecord::Schema.define(version: 20150529200357) do
     t.string   "video_background_content_type"
     t.integer  "video_background_file_size"
     t.datetime "video_background_updated_at"
+  end
+
+  create_table "gigs", force: :cascade do |t|
+    t.string   "event_link"
+    t.string   "tickets_link"
+    t.string   "event_name"
+    t.string   "tickets_name"
+    t.string   "event_place"
+    t.date     "event_date"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
   create_table "releases", force: :cascade do |t|
